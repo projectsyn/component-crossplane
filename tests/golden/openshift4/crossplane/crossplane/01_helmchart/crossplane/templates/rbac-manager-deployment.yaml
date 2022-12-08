@@ -46,7 +46,7 @@ spec:
         env:
         - name: LEADER_ELECTION
           value: 'true'
-        image: docker.io/crossplane/crossplane:v1.9.0
+        image: docker.io/crossplane/crossplane:v1.9.1
         imagePullPolicy: IfNotPresent
         name: crossplane
         ports:
@@ -68,7 +68,7 @@ spec:
       - args:
         - rbac
         - init
-        image: docker.io/crossplane/crossplane:v1.9.0
+        image: docker.io/crossplane/crossplane:v1.9.1
         imagePullPolicy: IfNotPresent
         name: crossplane-init
         resources:
