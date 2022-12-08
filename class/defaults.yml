@@ -2,7 +2,7 @@ parameters:
   crossplane:
     namespace: syn-crossplane
     charts:
-      crossplane: 1.9.0
+      crossplane: 1.9.1
     images:
       crossplane:
         registry: docker.io
