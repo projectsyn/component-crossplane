@@ -57,7 +57,7 @@ spec:
                   resource: limits.memory
             - name: LEADER_ELECTION
               value: 'true'
-          image: docker.io/crossplane/crossplane:v1.11.0
+          image: docker.io/crossplane/crossplane:v1.11.3
           imagePullPolicy: IfNotPresent
           name: crossplane
           ports:
@@ -90,7 +90,7 @@ spec:
                 resourceFieldRef:
                   containerName: crossplane-init
                   resource: limits.memory
-          image: docker.io/crossplane/crossplane:v1.11.0
+          image: docker.io/crossplane/crossplane:v1.11.3
           imagePullPolicy: IfNotPresent
           name: crossplane-init
           resources:

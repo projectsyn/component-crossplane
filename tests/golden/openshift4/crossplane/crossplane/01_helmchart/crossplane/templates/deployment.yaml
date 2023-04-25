@@ -63,7 +63,7 @@ spec:
               value: webhook-tls-secret
             - name: WEBHOOK_TLS_CERT_DIR
               value: /webhook/tls
-          image: docker.io/crossplane/crossplane:v1.11.0
+          image: docker.io/crossplane/crossplane:v1.11.3
           imagePullPolicy: IfNotPresent
           name: crossplane
           ports:
@@ -121,7 +121,7 @@ spec:
                   fieldPath: metadata.namespace
             - name: WEBHOOK_SERVICE_PORT
               value: '9443'
-          image: docker.io/crossplane/crossplane:v1.11.0
+          image: docker.io/crossplane/crossplane:v1.11.3
           imagePullPolicy: IfNotPresent
           name: crossplane-init
           resources:
