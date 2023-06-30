@@ -1,4 +1,8 @@
 parameters:
   facts:
     distribution: openshift4
-  crossplane: {}
+  crossplane:
+    namespaceLabels:
+      foo: bar
+    namespaceAnnotations:
+      openshift.io/node-selector: node-role.kubernetes.io/infra=

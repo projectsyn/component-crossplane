@@ -10,6 +10,22 @@ default:: `syn-crossplane`
 
 The namespace in which to deploy Crossplane.
 
+== `namespaceLabels`
+
+[horizontal]
+type:: dict
+default:: `{}`
+
+Additional labels to add to the created namespace.
+
+== `namespaceAnnotations`
+
+[horizontal]
+type:: dict
+default:: `{}`
+
+Additional annotations to add to the created namespace.
+
 == `providers`
 
 [horizontal]

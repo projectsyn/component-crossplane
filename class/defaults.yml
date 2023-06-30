@@ -1,6 +1,9 @@
 parameters:
   crossplane:
     namespace: syn-crossplane
+    namespaceLabels: {}
+    namespaceAnnotations: {}
+
     charts:
       crossplane: 1.11.0
     images:
