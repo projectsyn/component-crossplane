@@ -112,7 +112,12 @@ local namespace =
 ;
 
 {
-  '00_namespace': namespace,
+  '00_namespace': namespace {
+    metadata+: {
+      labels+: params.namespaceLabels,
+      annotations+: params.namespaceAnnotations,
+    },
+  },
   '01_rbac_finalizer_clusterrole': rbacFinalizerRole,
   '01_rbac_finalizer_clusterrolebinding': rbacFinalizerRoleBinding,
   [if std.length(providers) > 0 then '10_providers']: providers,
