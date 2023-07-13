@@ -5,12 +5,12 @@ parameters:
     namespaceAnnotations: {}
 
     charts:
-      crossplane: 1.11.0
+      crossplane: 1.12.2
     images:
       crossplane:
         registry: docker.io
         image: crossplane/crossplane
-        tag: v1.11.3
+        tag: v1.12.2
         pullPolicy: IfNotPresent
       kubectl:
         registry: docker.io

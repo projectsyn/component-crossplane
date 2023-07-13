@@ -8,8 +8,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: crossplane
     app.kubernetes.io/part-of: crossplane
-    app.kubernetes.io/version: 1.11.0
-    helm.sh/chart: crossplane-1.11.0
+    app.kubernetes.io/version: 1.12.2
+    helm.sh/chart: crossplane-1.12.2
     release: crossplane
   name: crossplane
   namespace: syn-crossplane
@@ -34,8 +34,8 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: crossplane
         app.kubernetes.io/part-of: crossplane
-        app.kubernetes.io/version: 1.11.0
-        helm.sh/chart: crossplane-1.11.0
+        app.kubernetes.io/version: 1.12.2
+        helm.sh/chart: crossplane-1.12.2
         release: crossplane
     spec:
       containers:
@@ -63,7 +63,7 @@ spec:
               value: webhook-tls-secret
             - name: WEBHOOK_TLS_CERT_DIR
               value: /webhook/tls
-          image: docker.io/crossplane/crossplane:v1.11.3
+          image: docker.io/crossplane/crossplane:v1.12.2
           imagePullPolicy: IfNotPresent
           name: crossplane
           ports:
@@ -88,6 +88,7 @@ spec:
               name: package-cache
             - mountPath: /webhook/tls
               name: webhook-tls-secret
+      hostNetwork: false
       initContainers:
         - args:
             - core
@@ -121,7 +122,7 @@ spec:
                   fieldPath: metadata.namespace
             - name: WEBHOOK_SERVICE_PORT
               value: '9443'
-          image: docker.io/crossplane/crossplane:v1.11.3
+          image: docker.io/crossplane/crossplane:v1.12.2
           imagePullPolicy: IfNotPresent
           name: crossplane-init
           resources:
@@ -141,7 +142,7 @@ spec:
       volumes:
         - emptyDir:
             medium: null
-            sizeLimit: 5Mi
+            sizeLimit: 20Mi
           name: package-cache
         - name: webhook-tls-secret
           secret:
