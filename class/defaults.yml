@@ -5,7 +5,7 @@ parameters:
     namespaceAnnotations: {}
 
     charts:
-      crossplane: 1.12.2
+      crossplane: 1.12.3
     images:
       crossplane:
         registry: docker.io
