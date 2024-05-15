@@ -6,7 +6,7 @@ local prometheus = import 'lib/prometheus.libsonnet';
 local inv = kap.inventory();
 
 local params = inv.parameters.crossplane;
-local on_openshift4 = inv.parameters.facts.distribution == 'openshift4';
+local on_openshift4 = std.member([ 'openshift4', 'oke' ], inv.parameters.facts.distribution);
 local has_service_account(provider) = std.count(std.objectFields(params.serviceAccounts), provider) > 0;
 local has_any_service = std.length(std.filter(function(x) std.objectHas(params.serviceAccounts, x), std.objectFields(params.providers))) > 0;
 local missing_controller(provider_name) = !std.objectHas(params.controllerConfigs, provider_name);
