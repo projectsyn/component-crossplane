@@ -1,7 +1,7 @@
 local com = import 'lib/commodore.libjsonnet';
 local inv = com.inventory();
 
-local on_openshift4 = inv.parameters.facts.distribution;
+local on_openshift4 = std.member([ 'openshift4', 'oke' ], inv.parameters.facts.distribution);
 local run_as_user = {
   runAsUser: null,
 };
@@ -31,7 +31,7 @@ local fixup(obj) =
   else
     obj;
 
-if on_openshift4 == 'openshift4' then
+if on_openshift4 then
   com.fixupDir(std.extVar('output_path'), fixup)
 else
   {}

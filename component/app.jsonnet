@@ -2,7 +2,7 @@ local kap = import 'lib/kapitan.libjsonnet';
 local inv = kap.inventory();
 local params = inv.parameters.crossplane;
 local argocd = import 'lib/argocd.libjsonnet';
-local on_openshift4 = inv.parameters.facts.distribution == 'openshift4';
+local on_openshift4 = std.member([ 'openshift4', 'oke' ], inv.parameters.facts.distribution);
 
 local ignore_diff_sa = {
   group: '',
