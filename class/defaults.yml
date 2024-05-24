@@ -15,7 +15,7 @@ parameters:
       kubectl:
         registry: docker.io
         image: bitnami/kubectl
-        tag: '1.25.4'
+        tag: '1.25.15'
     monitoring:
       enabled: true
       prometheus_rule_labels:
