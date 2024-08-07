@@ -206,3 +206,12 @@ parameters:
         requests:
           cpu: 1000m
 ----
+
+
+== `argocd.application.finalizers`
+
+[horizontal]
+type:: array
+default:: `[- resources-finalizer.argocd.argoproj.io]`
+
+This parameter allows to configure ArgoCD App finalizers.

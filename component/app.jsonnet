@@ -19,6 +19,9 @@ local ignore_diff_cr = {
 };
 
 local app = argocd.App('crossplane', params.namespace) {
+  metadata+: {
+    finalizers: params.argocd.application.finalizers,
+  },
   spec+: {
     ignoreDifferences:
       [ ignore_diff_cr ] +
