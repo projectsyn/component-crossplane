@@ -4,6 +4,10 @@ parameters:
     namespaceLabels: {}
     namespaceAnnotations: {}
 
+    argocd:
+      application:
+        finalizers:
+          - resources-finalizer.argocd.argoproj.io
     charts:
       crossplane: 1.12.3
     images:

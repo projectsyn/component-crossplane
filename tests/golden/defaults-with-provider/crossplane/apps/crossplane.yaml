@@ -1,3 +1,6 @@
+metadata:
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   ignoreDifferences:
     - group: rbac.authorization.k8s.io
