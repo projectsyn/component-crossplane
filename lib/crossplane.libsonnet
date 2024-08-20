@@ -58,7 +58,7 @@ local sync_options = {
   * \return A ControllerConfig object.
   */
   ControllerConfig(name):
-    kube._Object('pkg.crossplane.io/v1alpha1', 'ControllerConfig', name) + sync_options,
+    kube._Object('pkg.crossplane.io/v1beta1', 'ControllerConfig', name) + sync_options,
 
   /**
   * \brief Helper to create Composition objects.
