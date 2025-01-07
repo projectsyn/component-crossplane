@@ -32,6 +32,10 @@ local app = argocd.App('crossplane', params.namespace) {
   },
 };
 
+local appPath =
+  local project = std.get(std.get(app, 'spec', {}), 'project', 'syn');
+  if project == 'syn' then 'apps' else 'apps-%s' % project;
+
 {
-  crossplane: app,
+  ['%s/crossplane' % appPath]: app,
 }

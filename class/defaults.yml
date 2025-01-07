@@ -1,5 +1,7 @@
 parameters:
   crossplane:
+    =_metadata:
+      multi_tenant: true
     namespace: syn-crossplane
     namespaceLabels: {}
     namespaceAnnotations: {}
