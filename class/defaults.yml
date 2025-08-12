@@ -11,7 +11,7 @@ parameters:
         finalizers:
           - resources-finalizer.argocd.argoproj.io
     charts:
-      crossplane: 1.12.3
+      crossplane: 2.0.2
     images:
       crossplane:
         registry: docker.io
